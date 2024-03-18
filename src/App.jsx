@@ -130,7 +130,7 @@ function App() {
               />
             </p>
             {
-              cash !== 0? <p className="margin">YOU WON</p> : <p className="margin">REFUND</p>
+              cash != amount? <p className="margin">YOU WON</p> : <p className="margin">REFUND</p>
             }
             <p>
               <hr />
@@ -239,20 +239,20 @@ function App() {
       </div>
       <div className="app-game">
         <div className="app-input">
-          <input
+          <p className="bet-amount-input"><input
             type="text"
             placeholder="Amount"
             className="input"
             disabled={bet}
             onChange={(e) => setAmount(e.target.value)}
-          />
+          /> <p className="pro-color" id="pro">1/2</p><p className="pro-color">Max</p></p>
           {bet && (
             <>
               <p>Total Profit(0.5x)</p>
               <div className="app-profit">
                  {parseInt(profit) !== 0
                   ? <p>{parseInt(profit) - amount}</p>
-                  : <p>{parseInt(profit)}</p>} <p className="pro-color" id="pro">1/2</p><p className="pro-color">Max</p>
+                  : <p>{parseInt(profit)}</p>} 
               </div>
             </>
           )}

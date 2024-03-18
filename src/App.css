@@ -279,16 +279,44 @@ body {
   border-radius: 0px 0px 0px 10px;
   background-color: #262525;
 }
-.input {
-  width: 10dvw;
+
+.app-input .bet-amount-input .pro-color{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #333232;
+  background-color: #333232;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.bet-amount-input {
+  width: 7dvw;
   height:5dvh;
   outline: none;
-  padding-left: 30px;
   margin-top: 100px;
   border: none;
   border-radius: 5px;
   background-color: #2d2c2c;
   color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  border: 1px solid #333232;
+}
+
+.bet-amount-input input{
+  width: 3dvw;
+  height:5dvh;
+  outline: none;
+  padding-left: 30px;
+  border: none;
+  border-radius: 5px;
+  background-color: #2d2c2c;
+  color: #fff;
+  margin-right: 1dvw;
 }
 
 .app-input button {
@@ -517,7 +545,7 @@ body {
     padding: 0;
   }
 
-  .app-profit .pro-color{
+  .app-input .bet-amount-input .pro-color{
     height: 100%;
     display: flex;
     align-items: center;
@@ -527,22 +555,31 @@ body {
     color: #ffffff;
   }
 
-  .app-profit #pro{
-    border-right: 1px solid #000;
+  .bet-amount-input {
+    height:40px;
+    outline: none;
+    margin-top: 50px;
+    border: none;
+    margin: 0;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    border: 1px solid #333232;
+    
   }
 
-  .input {
-    width: 58dvw;
+  .bet-amount-input input{
+    width: 3dvw;
     height:40px;
     outline: none;
     padding-left: 30px;
     border: none;
-    margin: 0;
-    margin-right: 5dvw;
-    margin-bottom: 5px;
-    margin-top: 10px;
     border-radius: 5px;
-    border: 1px solid #333232;
+    background-color: #2d2c2c;
+    color: #fff;
+    margin-right: 1dvw;
   }
   
   .app-input button {
