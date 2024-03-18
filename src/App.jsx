@@ -88,6 +88,7 @@ function App() {
       setView(false);
       setRetry(false);
       setLevel(9);
+      setCash(0);
     }
   };
 
@@ -98,9 +99,9 @@ function App() {
     //   stat: "increase",
     // });
     setWallet(parseInt(wallet) + parseInt(profit));
-    parseInt(profit) !== 0
-      ? setCash(parseInt(profit) - amount)
-      : setCash(parseInt(profit));
+    console.log("profit", profit);
+    console.log("amount", amount)
+    setCash(parseInt(profit));
     setProfit(0);
     setBet(false);
     setView(false);
@@ -113,6 +114,7 @@ function App() {
     setBet(false);
     setProfit(0);
     setLevel(9);
+    setCash(0);
   };
 
   return (
