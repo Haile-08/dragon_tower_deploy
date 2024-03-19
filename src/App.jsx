@@ -5,7 +5,6 @@ import "./App.css";
 import GameLevel from "./GameLevel";
 import back from "./assets/back.png";
 import close from "./assets/closemodal.png";
-import coin from "./assets/coin.png";
 import { useMutation } from "react-query";
 import { getBalance, updateBalance } from "./balanceHook";
 
@@ -62,6 +61,8 @@ function App() {
       console.log("there was an error");
     },
   });
+
+  console.log("Amount Nan", amount)
 
   useEffect(() => {
     let newArray = [];
@@ -248,7 +249,7 @@ function App() {
           /> <p className="pro-color" id="pro">1/2</p><p className="pro-color">Max</p></p>
           {bet && (
             <>
-              <p>Total Profit(0.5x)</p>
+              <p className="total-profit-p">Total Profit(0.5x)</p>
               <div className="app-profit">
                  {parseInt(profit) !== 0
                   ? <p>{parseInt(profit) - amount}</p>

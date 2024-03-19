@@ -517,7 +517,7 @@ body {
     background-color: #262525;
   }
 
-  .app-input p {
+  .total-profit-p {
     width: 80dvw;
     display: none;
   }
@@ -545,7 +545,7 @@ body {
     padding: 0;
   }
 
-  .app-input .bet-amount-input .pro-color{
+   .bet-amount-input .pro-color{
     height: 100%;
     display: flex;
     align-items: center;
@@ -567,19 +567,17 @@ body {
     justify-content: flex-start;
     align-items: center;
     border: 1px solid #333232;
-    
+    margin-right: 5dvw;    
   }
 
   .bet-amount-input input{
-    width: 3dvw;
+    width: 20dvw;
     height:40px;
     outline: none;
-    padding-left: 30px;
     border: none;
     border-radius: 5px;
     background-color: #2d2c2c;
     color: #fff;
-    margin-right: 1dvw;
   }
   
   .app-input button {
@@ -595,6 +593,9 @@ body {
     margin: 0;
     margin-right: 5dvw;
     background-color: #ffca2c;
+  }
+  .app-input p{
+    width: 67dvw;
   }
   .app-game-display {
     width: 85dvw;
