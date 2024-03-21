@@ -257,9 +257,9 @@ function App() {
             placeholder="Amount"
             className="input"
             disabled={bet}
-            value={amount}
+            value={amount == 0 ? null : amount}
             onChange={(e) => setAmount(e.target.value)}
-          /> <p className="pro-color" id="pro" onClick={handle2x}>2x</p><p className="pro-color" onClick={handleMax}>Max</p></p>
+          /> <p className="pro-color" id="pro" onClick={bet?  null: handle2x}>2x</p><p className="pro-color" onClick={bet?  null: handleMax}>Max</p></p>
           {bet && (
             <>
               <p className="total-profit-p">Total Profit(0.5x)</p>
