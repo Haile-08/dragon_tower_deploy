@@ -107,7 +107,6 @@ function App() {
     setBet(false);
     setView(false);
     setLevel(9);
-    setAmount(0);
     setCashOutModal(true);
   };
 
@@ -117,7 +116,6 @@ function App() {
     setProfit(0);
     setLevel(9);
     setCash(0);
-    setAmount(0);
   };
 
   const handle2x = () => {
