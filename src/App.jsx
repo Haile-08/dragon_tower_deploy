@@ -81,7 +81,9 @@ function App() {
     // });
     if (parseInt(wallet) - parseInt(amount) < 0) {
       setLowModal(true);
-    } else {
+    } else if (amount == 0 && wallet == 0) {
+      setLowModal(true);
+    }else {
       setWallet(parseInt(wallet) - parseInt(amount));
       setProfit(parseInt(amount));
       setWin(false);
@@ -100,13 +102,12 @@ function App() {
     //   stat: "increase",
     // });
     setWallet(parseInt(wallet) + parseInt(profit));
-    console.log("profit", profit);
-    console.log("amount", amount)
     setCash(parseInt(profit));
     setProfit(0);
     setBet(false);
     setView(false);
     setLevel(9);
+    setAmount(0);
     setCashOutModal(true);
   };
 
@@ -116,7 +117,18 @@ function App() {
     setProfit(0);
     setLevel(9);
     setCash(0);
+    setAmount(0);
   };
+
+  const handle2x = () => {
+    if (amount && amount !== 0) {
+      setAmount(amount * 2);
+    }
+  }
+
+  const handleMax = () => {
+      setAmount(wallet);
+  }
 
   return (
     <div className="app">
@@ -245,8 +257,9 @@ function App() {
             placeholder="Amount"
             className="input"
             disabled={bet}
+            value={amount}
             onChange={(e) => setAmount(e.target.value)}
-          /> <p className="pro-color" id="pro">1/2</p><p className="pro-color">Max</p></p>
+          /> <p className="pro-color" id="pro" onClick={handle2x}>2x</p><p className="pro-color" onClick={handleMax}>Max</p></p>
           {bet && (
             <>
               <p className="total-profit-p">Total Profit(0.5x)</p>
